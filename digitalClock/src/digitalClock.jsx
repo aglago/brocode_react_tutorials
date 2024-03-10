@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 
 export default function DigitalClock() {
 
-    const [time, setTime] = useState(new Date().getTime());
+    const [time, setTime] = useState(new Date());
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setTime(new Date);
+            setTime(new Date());
         }, 1000);
 
         // cleanup function for when the component unmounts
@@ -30,8 +30,8 @@ export default function DigitalClock() {
     }
 
     return (
-        <>
-            <h1>{formatTime()}</h1>
-        </>
+        <div className="clock_bg">
+            <h1 className="border-red-200 text-red-500">{formatTime()}</h1>
+        </div>
     )
 }

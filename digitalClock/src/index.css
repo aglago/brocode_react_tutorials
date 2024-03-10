@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: digital;
+    src: url(./assets/fonts/digital-7.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock_bg {
+    height: 30vh;
+    width: 50vw;
+    background-color: #131313;
+    border: 10px solid #A2A2A2;
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    line-height: 30vh;
+    font-size: 75px;
+    color: white;
+    font-family: digital;
+}

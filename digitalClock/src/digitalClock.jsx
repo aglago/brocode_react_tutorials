@@ -29,9 +29,27 @@ export default function DigitalClock() {
         return (number < 10 ? "0" : "") + number;
     }
 
+    function handleDarkMode() {
+        const body = document.querySelector('body');
+        if (body.classList.contains("dark")) {
+            body.classList.remove("dark");
+            document.getElementById("dark_mode").style.color = "#131313";
+            document.getElementById("dark_mode").textContent = "go to dark mode";
+        } else {
+            body.classList.add("dark");
+            document.getElementById("dark_mode").style.color = "white";
+            document.getElementById("dark_mode").textContent = "go to light mode";
+        }
+    }
+
     return (
-        <div className="clock_bg">
-            <h1 className="border-red-200 text-red-500">{formatTime()}</h1>
+        <div>
+            <div className="head">
+                <span id="dark_mode" onClick={handleDarkMode}>go to dark mode</span>
+            </div>
+            <div className="clock_bg">
+                <h1 className="border-red-200 text-red-500">{formatTime()}</h1>
+            </div>
         </div>
     )
 }

@@ -16,6 +16,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.dark {
+    background-color: #131313;
+}
+.head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    /* background-color: red; */
+    width: 100%;
+
+    span {
+        position: absolute;
+        right: 2rem;
+        text-align: center;
+        line-height: 8vh;
+        cursor: pointer;
+    }
 }
 .clock_bg {
     height: 30vh;

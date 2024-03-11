@@ -1,5 +1,5 @@
 import ComponentB from "./componentB";
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const UserContext = createContext();
 
